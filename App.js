@@ -1,16 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import Hero from './.expo-shared/components/Hero';
+import PhotoList from './.expo-shared/components/PhotoList';
+import Login from './screens/Login';
+import { loginStyles } from './assets/styles';
 
 export default function App() {
   return (
     <>
     <SafeAreaView style={styles.safeArea}>
-    <Hero />
-    <View style={styles.container}>
-      <Text style={styles.header}>Boca Code IG Clone</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Login />
+    <PhotoList />
     </SafeAreaView>
     </>
   );
@@ -19,20 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "blue",
+    backgroundColor: "white",
   },
-
-  container: {
-    flex: 1,
-    backgroundColor: 'darksalmon',
-    alignItems: 'center',
-    justifyContent: 'center',
-    
-  },
-header: {
-  color: "white",
-  fontSize: 32,
-}
 
 
 });
